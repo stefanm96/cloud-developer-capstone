@@ -1,7 +1,7 @@
 #!/bin/sh
 # author: LHIND
 
-export VERSION=3.3.2
+export VERSION=${1}
 
 git checkout dev
 sed -i "s/version=.*/version="${VERSION}"/g" gradle.properties
