@@ -1,7 +1,7 @@
 #!/bin/sh
 # author: LHIND
 
-export VERSION=3.3.0
+export VERSION=3.3.1
 
 git checkout dev
 sed -i "s/version=.*/version="${VERSION}"/g" gradle.properties
@@ -13,3 +13,4 @@ git merge dev
 git tag ${VERSION}
 git push origin master
 git branch release/${VERSION}
+git push origin release/${VERSION}
